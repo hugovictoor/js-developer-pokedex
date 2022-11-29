@@ -1,94 +1,143 @@
 .pokemons {
     display: grid;
-    grid-template-columns: 1fr;
-    margin: 0;
+    margin: 10;
     padding: 0;
     list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    grid-auto-rows: minmax(auto, 150px);
+    border-color: #fff;
+  
 }
+
 
 .normal {
     background-color: #a6a877;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .grass {
     background-color: #77c850;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .fire {
     background-color: #ee7f30;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .water {
     background-color: #678fee;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .electric {
     background-color: #f7cf2e;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .ice {
     background-color: #98d5d7;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .ground {
     background-color: #dfbf69;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .flying {
     background-color: #a98ff0;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .poison {
     background-color: #a040a0;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .fighting {
     background-color: #bf3029;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .psychic {
     background-color: #f65687;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .dark {
     background-color: #725847;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .rock {
     background-color: #b8a137;
+    border-radius: 1.5rem;
+    padding: 1rem;
 }
 
 .bug {
     background-color: #a8b720;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .ghost {
     background-color: #6e5896;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .steel {
     background-color: #b9b7cf;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .dragon {
     background-color: #6f38f6;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .fairy {
     background-color: #f9aec7;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .pokemon {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    position: relative;
     margin: .5rem;
     padding: 1rem;
     border-radius: 1rem;
+    z-index: 0;
+
 }
+
+.pokemon:hover {
+    z-index: 10;
+}
+
+
+
 
 .pokemon .number {
     color: #000;
-    opacity: .3;
+    opacity: .8;
     text-align: right;
     font-size: .625rem;
 }
@@ -120,11 +169,13 @@
     border-radius: 1rem;
     filter: brightness(1.1);
     text-align: center;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 .pokemon .detail img {
     max-width: 100%;
-    height: 70px;
+    height: 80px;
 }
 
 .pagination {
@@ -136,6 +187,80 @@
     padding: 1rem;
 }
 
+.OnHover {
+    visibility: hidden;
+    border-radius: 1rem; 
+    display: grid;
+    grid-template-rows: 1fr, 4fr, 5fr;
+    align-items: center;
+    position:relative; 
+    top:-100px;
+    right:-80px;
+    grid-column-end: auto;
+    grid-row-start: auto;
+    filter: brightness(0.9) contrast(1.2);
+    border-collapse: separate;
+    border-radius: 1rem;
+    text-transform: capitalize;  
+    background-color: white;
+    
+}
+
+
+
+.imgOnHover{
+    width: 200px;
+    max-height: 100%;
+    bottom: -20px;
+    right: -50px;
+    position: relative;
+}
+
+.pokemon:hover > .OnHover {
+    visibility: visible;
+  
+}
+
+.numberOnHover {
+text-align: center;
+color: black;
+top:10px;
+font-size: 1.1rem;
+padding: 0.5rem;
+border-radius: 1rem;
+filter:brightness(0.9) contrast(0.9);
+}
+
+.stats {
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+}
+
+.statInline{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.detailOnHover{
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+h3 {
+    margin:0;
+    padding:0.1rem;
+    text-align: center;
+}
+
+.statNumber{
+text-align: center;
+font-size: 30px;
+}
+
+
+
 .pagination button {
     padding: .25rem .5rem;
     margin: .25rem 0;
@@ -143,7 +268,7 @@
     color: #fff;
     background-color: #6c79db;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1 rem;
 }
 
 @media screen and (min-width: 380px) {
@@ -158,8 +283,3 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    .pokemons {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}

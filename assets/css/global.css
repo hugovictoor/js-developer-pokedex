@@ -3,16 +3,27 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px black;
+}
+
 body {
-    background-color: #f6f8fc;
+    background-color: violet;
+   
+    
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-image: linear-gradient(33deg, #C165DD, #5C27FE);
+    
+   
 }
+
 
 @media screen and (min-width: 992px) {
     .content {
