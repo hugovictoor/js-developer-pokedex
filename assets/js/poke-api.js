@@ -8,22 +8,22 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     const roundStats = (stat) => {
         if(stat <= 30){
-            return stat = "*"
+            return stat = "•"
         }
         if(stat >= 30 &&  stat <= 60){
-            return stat = "* *"
+            return stat = "• •"
         }
         if(stat > 60 &&  stat <= 90){
-            return stat = "* * *"
+            return stat = "• • •"
         }
         if(stat > 90 &&  stat <= 115){
-            return stat = "* * * *"
+            return stat = "• • • •"
         }
         if(stat > 115 &&  stat <= 135){
-            return stat = "* * * * *"
+            return stat = "• • • • •"
         }
         if(stat > 135){
-            return stat = "* * * * * *"
+            return stat = "• • • • • •"
         }
        
     }

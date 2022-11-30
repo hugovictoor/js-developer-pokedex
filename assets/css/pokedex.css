@@ -226,6 +226,7 @@ text-align: center;
 color: black;
 top:10px;
 font-size: 1.1rem;
+margin: 4px;
 padding: 0.5rem;
 border-radius: 1rem;
 filter:brightness(0.9) contrast(0.9);
